@@ -98,6 +98,7 @@
 
 	</build>
 	 <repositories>
+		<repository>
 			<id>central-repository</id>
 			<name>Central Repository</name>
 			<url>http://repo1.maven.org/maven2</url>
