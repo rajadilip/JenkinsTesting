@@ -1,129 +1,18 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>junit</artifactId>
 
-	<modelVersion>4.0.0</modelVersion>
-	
 	<dependencies>
 		<dependency>
-			<artifactId>spring</artifactId>
-			<version>2.0.1</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<artifactId>commons-logging</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<artifactId>proxool</artifactId>
-			<version>0.9.0RC2</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
+			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.4</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<artifactId>aspectjrt</artifactId>
-			<version>1.6.1</version>
-		</dependency>
-		<dependency>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.6.1</version>
-		</dependency>
-		<dependency>
-			<artifactId>jedis</artifactId>
-			<version>2.1.0</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<artifactId>hadoop-common</artifactId>
-			<version>0.21.0</version>
-		</dependency>
-		<dependency>
-			<artifactId>hadoop-hdfs</artifactId>
-			<version>0.21.0</version>
+			<version>4.8</version>
+            <type>jar</type>
+            <scope>test</scope>
+            <optional>true</optional>
 		</dependency>
 	</dependencies>
-	<build>
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ftp</artifactId>
-				<version>1.0-alpha-3</version>
-			</extension>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh</artifactId>
-				<version>1.0-beta-4</version>
-			</extension>
-		</extensions>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-deploy-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.2</version>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-
-			<!-- NOT USING .aj AspectJ files <plugin> <groupId>org.codehaus.mojo</groupId> 
-				<artifactId>aspectj-maven-plugin</artifactId> <configuration> <includes> 
-				<include>**/Logging.aj</include> </includes> </configuration> <executions> 
-				<execution> <goals> <goal>compile</goal> </goals> </execution> </executions> 
-				</plugin> -->
-		</plugins>
-
-		<resources>
-			<resource>
-				<directory>target/processed/</directory>
-			</resource>
-		</resources>
-
-	</build>
-	 <repositories>
-		<repository>
-			<id>central-repository</id>
-			<name>Central Repository</name>
-			<url>http://repo1.maven.org/maven2</url>
-		</repository>
-		<repository>
-			<id>ftp-repository</id>
-			<name>Cloe Repository</name>
-			<url>http://172.16.60.21/maven</url>
-		</repository>
-		<repository>
-			<id>restlet</id>
-			<name>Restlet Repository</name>
-			<url>http://maven.restlet.org/</url>
-		</repository>
-		<repository>
-			<id>local-repository</id>
-			<name>Cloe Local Library Repository</name>
-			<url>file://Z:/</url>
-		</repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>${ftp.server.id}</id>
-			<url>${ftp.repository}</url>
-			<uniqueVersion>false</uniqueVersion>
-		</repository>
-	</distributionManagement>
 </project>
