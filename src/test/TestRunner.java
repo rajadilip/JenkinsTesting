@@ -11,7 +11,8 @@ import org.junit.runner.notification.Failure;
 public class TestRunner extends TestCase{
 
     public static void main(String[] args) {
-            Result result = JUnitCore.runClasses(TestJUnit.class , MyClass.class);
+            Result result = JUnitCore.runClasses(MyClassTest.class );
+
             for (Failure failure : result.getFailures()) {
                 System.out.println(failure.toString());
             }

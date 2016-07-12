@@ -3,14 +3,10 @@ package test;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 /**
  * Created by dilip on 7/12/16.
  */
-public class MyClass extends TestCase {
+public class MyClassTest extends TestCase {
     private int number = 35;
 
     protected void setUp() throws Exception {
@@ -21,6 +17,8 @@ public class MyClass extends TestCase {
     {
         super.tearDown();
     }
+
+    @Test
     public void testNumber()
     {
         assertEquals(35 , number);
