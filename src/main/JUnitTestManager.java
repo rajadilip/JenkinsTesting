@@ -1,4 +1,4 @@
-package test;
+package main;
 
 /**
  * Created by dilip on 7/12/16.
