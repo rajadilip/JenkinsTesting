@@ -21,6 +21,6 @@ public class MyClassTest extends TestCase {
     @Test
     public void testNumber()
     {
-        assertEquals(35 , number);
+        assertEquals(25 , number);
     }
 }
