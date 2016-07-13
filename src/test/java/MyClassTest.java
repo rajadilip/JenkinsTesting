@@ -1,20 +1,23 @@
 package test.java;
 
 import junit.framework.TestCase;
-//import main.MyClass;
-import org.junit.Test;
-
 /**
  * Created by dilip on 7/13/16.
  */
 public class MyClassTest extends TestCase{
-    //private String  test = "onetwo";
-    public void testConcatenate() {
-       MyClass myUnit = new MyClass();
 
-       String result = myUnit.concatenate("one", "two");
+   MyClass myClass = new MyClass();
+
+    public void testConcatenate() {
+
+       String result = myClass.concatenate("one", "two");
 
         assertEquals("onetwo", result);
+
+    }
+    public void testAdd()
+    {
+        assertEquals(myClass.add(2 , 3) , 6);
 
     }
 }
