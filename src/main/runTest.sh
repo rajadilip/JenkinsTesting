@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-#!/bin/sh
+#!/bin/bash
 #example of usage of this file bash runTest.sh cloeTest kratos 10
 # here are changing the locahost with actual hostname using sed command
 hostname=`hostname`
-sed -i "s/localhost/$hostname/g" node.properties
+#sed -i "s/localhost/$hostname/g" node.properties
 
 
 echo "PWD=`pwd`"
@@ -19,9 +19,9 @@ echo "The calculated market duration ( in min. ) is $marketDurationInMins"
 marketOpenTime=`date +"%H:%M:%S"`
 
 # modify market duration by subtracting 5 minutes from the input argument
-modifiedMarketDuration=echo 'ibase=10;obase=10; $marketDurationInMins-5'|'bc'
+modifiedMarketDuration= echo 'ibase=10;obase=10;' $marketDurationInMins-5 | 'bc'
 
-echo "MarketTime is " $modifiedMarketDuration
+echo $modifiedMarketDuration
 
 #echo marketDurationInMins before $marketDurationInMins
 #modifiedMarketDuration=$marketDurationInMins-5
