@@ -17,7 +17,7 @@ public class MyClassTest extends TestCase{
     }
     public void testAdd()
     {
-        assertEquals(myClass.add(2 , 3) , 6);
+        assertEquals(myClass.add(2 , 3) , 5);
 
     }
 }
