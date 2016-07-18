@@ -21,6 +21,8 @@ marketOpenTime=`date +"%H:%M:%S"`
 # modify market duration by subtracting 5 minutes from the input argument
 modifiedMarketDuration= echo 'ibase=10;obase=10;' $marketDurationInMins-5 | 'bc'
 
+modifiedMarketDuration= echo 'ibase=10;obase=10;' $marketDurationInMins-4 | 'bc'
+
 echo $modifiedMarketDuration
 
 #echo marketDurationInMins before $marketDurationInMins
