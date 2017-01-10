@@ -4,9 +4,11 @@ import junit.framework.TestCase;
 /**
  * Created by dilip on 7/13/16.
  */
-public class MyClassTest extends TestCase{
+public class MyClassTest extends TestCase    {
 
    MyClass myClass = new MyClass();
+   
+   MyClass myClass1 = new MyClass();
 
     public void testConcatenate() {
 
